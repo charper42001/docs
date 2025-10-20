@@ -22,7 +22,7 @@ Virtual Machines (VMs).
 
 **NOTE:** 16GB of RAM can be used for smaller environment that have under 1,000 endpoints.
 
-This should be setup as a Ubuntu 20.04 LTS Virtual Machine, with a majority of the storage allocated
+This should be setup as a Ubuntu 22.04 LTS Virtual Machine, with a majority of the storage allocated
 to the root "/" partition. The Customer Success Team will provide a Ubuntu ISO that can be
 downloaded and installed prior to implementation of Privilege Secure.
 
