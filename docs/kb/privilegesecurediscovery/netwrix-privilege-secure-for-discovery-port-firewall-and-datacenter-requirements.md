@@ -34,39 +34,15 @@ title: "Netwrix Privilege Secure for Discovery Port/Firewall and Datacenter Requ
 
 Formerly Netwrix Privilege Secure Discovery
 
-## Physical Installation
-
-These requirements, in this section, only apply to physical appliances. If there will be a Virtual Appliance used, these requirements do not apply.
-
-### Appliance Specifications
-
-- 1 RU / 1U size appliance
-- Dell R440 with 2x 960GB SSDs in a hardware RAID-1 configuration, 64GB of RAM
-- Ubuntu 18.04.5 LTS
-
-### Cabling/Power Requirements
-
-- Dual 120V power cables (ideally, connected to independent UPSs) at max 550W each
-- Included power plug: `NEMA 5-15P to C13 Wall Plug, 125 Volt, 15 AMP, 10 Feet (3m)`
-
-## Networking specifications
-
-### Physical Requirements
-
-The Dell R440 servers come with at least 3 NIC’s on the back of the serve
-
-- Single Gigabit ethernet, plugged into Ethernet Interface #1 (on rear/backplane of the server) for Netwrix Privilege Secure Discovery traffic
-- Single Gigabit ethernet, plugged into iDRAC Interface (on read/backplane of the server) for iDRAC configuration (credentials are unique to each appliance)
+## Article has been update as of Oct 2025 to remove "physical" server/installation references. Currently new NPS-D customer/deployents are only supported within virtual environments (On-prem/cloud)
 
 ### IP Addresses
 
-- Physical servers will pick up 2 IP addresses via DHCP. One for iDRAC, one for Netwrix Privilege Secure Discovery
 - Virtual servers will pick up 1 IP addresses via DHCP for Netwrix Privilege Secure Discovery
 - A static IP address is required:
-  - Physical servers: a static IP address can be configured for iDRAC
-  - Physical and virtual servers: A static IP addresses can be assigned for Netwrix Privilege Secure Discovery use
-  - To access servers with no DHCP IP, a KVM (physical) or virtual console (VM) can be connected to configure a static IP addresses via the terminal. KVM requirements: 1x VGA and 1x USB (keyboard) connectors
-- Netwrix Privilege Secure Discovery uses non-routable link-local addresses, also known as Automatic Private IP Addressing (APIPA), for internalDocker networking use
+  - Virtual servers: A static IP addresses can be assigned for Netwrix Privilege Secure Discovery use
+  - To access servers with no DHCP IP, a virtual console (VM) can be connected to configure a static IP addresses via the terminal.
+- Netwrix Privilege Secure Discovery uses non-routable link-local addresses, also known as Automatic Private IP Addressing (APIPA), for internal Docker networking use
 
 ### Production/Test Environments: Load Balancer(s)
 
